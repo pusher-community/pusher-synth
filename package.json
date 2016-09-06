@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "html": "html-minifier src/index.html --collapse-whitespace -o build/index.html",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/pusher-community/pusher-synth#readme",
   "devDependencies": {
     "buble": "^0.13.2",
+    "html-minifier": "^3.0.2",
     "pusher-js": "^3.2.1",
     "rollup": "^0.34.13",
     "rollup-plugin-buble": "^0.13.0",
