@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "html": "html-minifier src/index.html --collapse-whitespace -o build/index.html",
-    "js": "rollup -c && r.js -o amd-build.js"
+    "js": "rollup -c && r.js -o amd-build.js",
+    "gh": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
     "rollup-plugin-buble": "^0.13.0",
     "tone": "^0.7.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv-safe": "^2.3.1",
+    "midi": "^0.9.5",
+    "pusher": "^1.5.0"
+  }
 }
