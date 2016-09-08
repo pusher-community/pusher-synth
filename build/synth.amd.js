@@ -46,28 +46,36 @@ window.synth = synth
 //const pusher = new Pusher('key', {})
 
 
-ctx.lineJoin = "round";
-ctx.lineWidth = 4;
-ctx.strokeStyle = '#08f';
-
+ctx.lineJoin = "round"
+ctx.lineWidth = 5
+ctx.strokeStyle = '#549eff'
+ctx.fillStyle = '#549eff'
 
 function draw(){
   requestAnimationFrame(draw)
 
-  ctx.clearRect(0, 0, w, h);
-  var values = waveform.analyse();
-  ctx.beginPath();
-  // ctx.moveTo(0,0)
-  ctx.lineTo(0, (values[0] / 255) * h);
-  for (var i = 1, len = values.length; i < len; i++){
-    var val = values[i] / 255;
-    var x = w * (i / len);
-    var y = val * h;
-    ctx.lineTo(x, y);
+  ctx.clearRect(0, 0, w, h)
+  var values = waveform.analyse()
+  ctx.beginPath()
+
+  var s = Math.min(w,h)/2.3
+
+  for (var i = 0, len = values.length; i < len; i++){
+    var val = values[i] / 255
+
+    // var x = w * (i / len)
+    // var y = val * h
+    var o = (i/len) * Math.PI * 2.01
+
+    var x = w/2 + (Math.sin(o) * s * val)
+    var y = h/2 + (Math.cos(o) * s * val)
+
+    ctx.lineTo(x, y)
   }
 
   // ctx.lineTo(w,0)
-  ctx.stroke();
+  // ctx.fill()
+  ctx.stroke()
 }
 
 requestAnimationFrame(draw)
