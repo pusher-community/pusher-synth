@@ -5,7 +5,7 @@ PolySynth = 'default' in PolySynth ? PolySynth['default'] : PolySynth;
 Analyser = 'default' in Analyser ? Analyser['default'] : Analyser;
 Pusher = 'default' in Pusher ? Pusher['default'] : Pusher;
 
-var noteToFrequency = function (note) { return 440 * Math.pow(2, (note-69)/17); }
+var noteToFrequency = function (note) { return 440 * Math.pow(2, (note-49)/12); }
 
 var fft = new Analyser('fft', 32)
 var waveform = new Analyser('waveform', 1024)
