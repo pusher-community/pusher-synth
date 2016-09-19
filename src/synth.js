@@ -3,7 +3,7 @@ import PolySynth from 'Tone/instrument/PolySynth'
 import Analyser from 'Tone/component/Analyser'
 import Pusher from 'pusher-js'
 
-const noteToFrequency = note => 440 * Math.pow(2, (note-69)/17)
+const noteToFrequency = note => 440 * Math.pow(2, (note-49)/12)
 
 const fft = new Analyser('fft', 32)
 const waveform = new Analyser('waveform', 1024)
