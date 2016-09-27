@@ -7,5 +7,5 @@ export default {
   plugins: [
     buble()
   ],
-  dest: 'build/synth.amd.js'
+  dest: 'docs/synth.amd.js'
 }

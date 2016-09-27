@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "html": "html-minifier src/index.html --collapse-whitespace -o build/index.html",
-    "js": "rollup -c && r.js -o amd-build.js",
-    "gh": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
+    "html": "html-minifier src/index.html --collapse-whitespace -o docs/index.html",
+    "js": "rollup -c && r.js -o amd-build.js"
   },
   "repository": {
     "type": "git",

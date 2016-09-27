@@ -1,11 +1,11 @@
 ({
 
     name: 'node_modules/almond/almond',
-    include: ['./build/synth.amd'],
-    insertRequire: ['./build/synth.amd'],
+    include: ['./docs/synth.amd'],
+    insertRequire: ['./docs/synth.amd'],
 
-    // name: "./build/synth.amd.js",
-    out: "./build/synth.js",
+    // name: "./docs/synth.amd.js",
+    out: "./docs/synth.js",
     paths: {
       'pusher-js': './node_modules/pusher-js/dist/web/pusher'
     },
